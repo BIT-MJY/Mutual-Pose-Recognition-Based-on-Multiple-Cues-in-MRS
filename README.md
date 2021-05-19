@@ -9,3 +9,6 @@ Source Code for ICUS 2021: Mutual Pose Recognition Based on Multiple Cues in Mul
 
 
 Coming soon......
+
+
+Developed by Junyi Ma, Jinyi Xu.
