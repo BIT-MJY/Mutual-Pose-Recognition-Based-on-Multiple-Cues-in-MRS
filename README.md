@@ -3,7 +3,7 @@ Source Code for ICUS 2021: Mutual Pose Recognition Based on Multiple Cues in Mul
 
 
 
-* Data collection
+* Data Collection
 * Sphere Projection
 * ICP/FICP/NDT
 
