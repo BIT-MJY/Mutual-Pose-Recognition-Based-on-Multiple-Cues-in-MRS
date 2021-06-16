@@ -19,7 +19,16 @@ To train a CNN to regress out 6-DOF mutual poses, mapping from **point clouds at
 * Robot Operating System.
 * Tensorflow 2.
 ### Deployment
-Suppose you have two robots A and B with similar shapes. Then you collect laser points attached to robot B using the lidar of robot A.  
+Suppose you have two robots A and B with similar shapes. Then you collect laser points attached to robot B using the lidar of robot A. At the same time, poses of robot B should be recorded. Thus there are several pivotal problems:
+#### Time Synchronization
+Two robots are in the same WIFI:
+* Robot A: 192.168.43.50
+* Robot B: 192.168.43.100
+You can use the following command in the terminal (Robot A) to finish time synchronization between the two robots 
+```
+sudo ntpdate 192.168.43.100
+```
+#### Initial Mutual Pose
 
 
 
