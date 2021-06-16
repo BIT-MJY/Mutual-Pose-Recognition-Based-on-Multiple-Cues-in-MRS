@@ -19,7 +19,7 @@ To train a CNN to regress out 6-DOF mutual poses, mapping from **point clouds at
 * Robot Operating System.
 * Tensorflow 2.
 ### Deployment
-Suppose there are two robots \alpha and \beta
+Suppose there are two robots $\alpha$ and $\beta$
 
 
 
