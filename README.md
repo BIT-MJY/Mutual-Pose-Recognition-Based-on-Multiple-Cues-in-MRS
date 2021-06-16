@@ -19,7 +19,8 @@ To train a CNN to regress out 6-DOF mutual poses, mapping from **point clouds at
 * Robot Operating System.
 * Tensorflow 2.
 ### Deployment
-Suppose there are two robots $\alpha$ and $\beta$
+Suppose you have two robots A and B with similar shapes. Then you collect laser points attached to robot B using the lidar of robot A.  
+
 
 
 
@@ -27,3 +28,7 @@ Coming soon......
 
 
 Developed by Junyi Ma, Jinyi Xu.
+
+
+
+
