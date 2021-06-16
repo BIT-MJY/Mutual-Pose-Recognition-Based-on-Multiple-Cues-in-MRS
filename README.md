@@ -31,7 +31,7 @@ sudo ntpdate 192.168.43.100
 ```
 #### Initial Mutual Pose
 The initial mutual pose is utilized to calculate the real mutual poses. It can be realized by multi-lidar extrinsic calibration. We don't provide the source code for calibration, but it is still significant to validate the feasibility of our devised CNN (a gray box) and the following error propagation although "real" mutual poses are not "real".
-### Robot B Poses for  Mutual Poses
+#### Robot B Poses for  Mutual Poses
 Here ALOAM is used by Robot B and the accurate poses from the topic ```/aft_mapped_to_init``` is recorded with [capturepose node].
 
 
