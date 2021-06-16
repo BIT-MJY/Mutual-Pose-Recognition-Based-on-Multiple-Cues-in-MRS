@@ -10,9 +10,17 @@ Here is the method to utilize the multiple cues including depth maps, normal map
 
 ## Related Work
 * Spherical Projection is implemented along the lines of [OverlapNet](https://github.com/BIT-MJY/OverlapNet_for_TF2).
+* Error propagation follows [Moment Propagation](https://github.com/kaibrach/Moment-Propagation.git).
 
 ## Data Collection
-To train a CNN to regress out 6-DOF mutual poses, mapping from **point clouds attached to the robot teammate** to **mutual poses** should be collected.
+To train a CNN to regress out 6-DOF mutual poses, mapping from **point clouds attached to the robot teammate** to **mutual poses** should be collected. 
+### Hardware and Software Preparation
+* Two robots with lidar.
+* Robot Operating System.
+* Tensorflow 2.
+### Deployment
+Suppose there are two robots $\alpha$ and $\beta$
+
 
 
 Coming soon......
