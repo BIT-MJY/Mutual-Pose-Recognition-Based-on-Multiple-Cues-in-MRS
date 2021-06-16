@@ -24,7 +24,7 @@ Suppose you have two robots A and B with similar shapes. Then you collect laser 
 #### Time Synchronization
 Two robots are in the same WIFI:
 * Robot A: 192.168.43.50
-* Robot B: 192.168.43.100
+* Robot B: 192.168.43.100  
 You can use the following command in the terminal (Robot A) to finish time synchronization between the two robots 
 ```
 sudo ntpdate 192.168.43.100
