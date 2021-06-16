@@ -11,6 +11,7 @@ Here is the method to utilize the multiple cues including depth maps, normal map
 ## Related Work
 * Spherical Projection is implemented along the lines of [OverlapNet](https://github.com/BIT-MJY/OverlapNet_for_TF2).
 * Error propagation follows [Moment Propagation](https://github.com/kaibrach/Moment-Propagation.git).
+* Recorded poses is from [ALOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM).
 
 ## Data Collection
 To train a CNN to regress out 6-DOF mutual poses, mapping from **point clouds attached to the robot teammate** to **mutual poses** should be collected. 
@@ -29,8 +30,9 @@ You can use the following command in the terminal (Robot A) to finish time synch
 sudo ntpdate 192.168.43.100
 ```
 #### Initial Mutual Pose
-
-
+The initial mutual pose is utilized to calculate the real mutual poses. It can be realized by multi-lidar extrinsic calibration. We don't provide the source code for calibration, but it is still significant to validate the feasibility of our devised CNN (a gray box) and the following error propagation although "real" mutual poses are not "real".
+### Robot B Poses for  Mutual Poses
+Here ALOAM is used by Robot B and the accurate poses from the topic ```/aft_mapped_to_init``` is recorded with [capturepose node].
 
 
 Coming soon......
