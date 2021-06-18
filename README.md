@@ -65,7 +65,7 @@ Pose_Learning
 >>> 1.txt  
 >>> 2.txt  
 >>> ...  
->> vertex_img_n2
+>> vertex_img_n2  
 >>> 1.txt  
 >>> 2.txt  
 >>> ...   
