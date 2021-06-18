@@ -53,10 +53,14 @@ Pose_Learning
 >>> 1.txt  
 >>> 2.txt  
 >>> ...
+
+
 >> vertex_img_n0 
 >>> 1.txt  
 >>> 2.txt  
 >>> ...  
+
+
 >> vertex_img_n1 
 >>> 1.txt  
 >>> 2.txt  
@@ -65,9 +69,13 @@ Pose_Learning
 >>> 1.txt  
 >>> 2.txt  
 >>> ...   
+
+
 >> poses  
 >>> timePose.txt  
 >>> truePose.txt  
+
+
 >> time.txt  
 
 > data  
