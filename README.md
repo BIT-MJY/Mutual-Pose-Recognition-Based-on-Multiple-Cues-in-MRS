@@ -31,8 +31,54 @@ sudo ntpdate 192.168.43.100
 ```
 #### Initial Mutual Pose
 The initial mutual pose is utilized to calculate the real mutual poses. It can be realized by multi-lidar extrinsic calibration. We don't provide the source code for calibration, but it is still significant to validate the feasibility of our devised CNN (a gray box) and the following error propagation although "real" mutual poses are not "real".
-#### Robot B Poses for  Mutual Poses
-Here ALOAM is used by Robot B and the accurate poses from the topic ```/aft_mapped_to_init``` is recorded with [capturepose node].
+#### Robot B Poses for Mutual Poses
+Here [ALOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM) is used by Robot B and the accurate poses from the topic ```/aft_mapped_to_init``` is recorded with [capturepose node]. The results of ALOAM is thought of as ground truth. If you build the surrounding map in advance, scan-to-map can be utilized to collect GT poses. In addition, time stamps are recorded at the same time.
+#### Collecting Point Clouds attached to robot B
+Point Clouds attached to robot B should be segmented by RangeNet++ firstly. However, here we only provide the geometry cues and intensity cues for recognition. Thus, for the sake of convenience, we collect the laser points within the preset region of interest. In the ROI, there are no laser points except those attached to robot B. We provide the node [collectnode] for collecting the points and records the time stamps at the same time.
+
+## Data Preprocessing
+### Spherical Projection
+Spherical projection is implemented based on the collected point clouds attached to robot B. The node [sphericalnode] is utilized to generate depth maps, intensity maps, and normal maps. These multiple maps are saved as txt.
+### [txt to npy]
+### [Interpolation]
+### Structure
+
+Pose_Learning:
+	-raw_txt
+		-depth
+			-1.txt
+			-2.txt
+			......
+		-intensity
+			-1.txt
+			-2.txt
+			......
+		-vertex_img_n0
+			-1.txt
+			-2.txt
+			......
+		-vertex_img_n1
+			-1.txt
+			-2.txt
+			......
+		-vertex_img_n2
+			-1.txt
+			-2.txt
+			......
+		-poses
+			-timePose.txt  # 位姿数据（右车采集）
+			-truePose.txt	# 位姿数据对应的时间
+		-time.txt		# images对应的时间
+	-data
+		-这些文件夹均由程序自动生成
+	-log
+		-weights		# 保存权重位置
+
+
+
+## Training
+
+## testing
 
 
 Coming soon......
