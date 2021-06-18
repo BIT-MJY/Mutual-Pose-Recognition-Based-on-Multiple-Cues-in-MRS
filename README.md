@@ -52,7 +52,7 @@ Pose_Learning
 >> intensity  
 >>> 1.txt  
 >>> 2.txt  
->>> ...  
+>>> ...
 >> vertex_img_n0 
 >>> 1.txt  
 >>> 2.txt  
