@@ -42,8 +42,24 @@ Spherical projection is implemented based on the collected point clouds attached
 ### [txt to npy]
 ### [Interpolation]
 ### Structure
-Pose_Learning:\<br>
-	-raw_txt
+Pose_Learning
+> raw_txt
+>> depth
+>> intensity
+>> vertex_img_n0
+>> vertex_img_n1
+>> vertex_img_n2
+>> poses
+>> time.txt
+
+> data
+>> The files in this folder are all generated automatically.
+
+> log
+>> cp
+>> weights
+
+> img
 
 ## Training
 
