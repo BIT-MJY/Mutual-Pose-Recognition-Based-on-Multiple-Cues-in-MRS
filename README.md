@@ -45,11 +45,29 @@ Spherical projection is implemented based on the collected point clouds attached
 Pose_Learning
 > raw_txt  
 >> depth  
+>>> 1.txt  
+>>> 2.txt  
+>>> ...  
+
 >> intensity  
->> vertex_img_n0  
->> vertex_img_n1  
->> vertex_img_n2  
+>>> 1.txt  
+>>> 2.txt  
+>>> ...  
+>> vertex_img_n0 
+>>> 1.txt  
+>>> 2.txt  
+>>> ...  
+>> vertex_img_n1 
+>>> 1.txt  
+>>> 2.txt  
+>>> ...  
+>> vertex_img_n2
+>>> 1.txt  
+>>> 2.txt  
+>>> ...   
 >> poses  
+>>> timePose.txt  
+>>> truePose.txt  
 >> time.txt  
 
 > data  
