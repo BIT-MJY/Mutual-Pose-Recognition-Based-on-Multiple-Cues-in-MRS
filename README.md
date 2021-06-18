@@ -43,8 +43,8 @@ Spherical projection is implemented based on the collected point clouds attached
 ### [Interpolation]
 ### Structure
 
-Pose_Learning:
-	-raw_txt
+Pose_Learning
+	raw_txt
 		-depth
 			-1.txt
 			-2.txt
