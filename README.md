@@ -60,8 +60,10 @@ Spherical projection is implemented based on the collected point clouds attached
 roslaunch sphere_projection sphere.launch
 ```
 Params in [sphere.launch](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/data_collection_robotA/src/sphereProjection/launch/sphere.launch):
-- **path_pt**: The fold saving raw lidar data .pcd from "Collecting Point Clouds attached to robot B"/**path_pt_for_save**.
-
+- **path_pt_source**: The folder saving raw lidar data .pcd from "Collecting Point Clouds attached to robot B". It is same with **path_pt_for_save**.
+- **vertex_root**: The folder to save various types of maps. Six folders should be in **vertex_root** including depth, intensity, vertex_img, vertex_img_n0, vertex_img_n1, vertex_img_n2.
+- **image_height**: The height of the vertex maps.
+- **image_width**: The width of the vertex maps.
 
 ### [txt to npy]
 ### [Interpolation]
