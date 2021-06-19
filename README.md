@@ -39,15 +39,15 @@ Run ALOAM firstly for Robot B. Then, launch the [capturepose node](https://githu
 rosrun capturePose capturepose 
 ```
 Params in capturepose.cpp:
-- odomAftRecord: The txt file recording the output poses of ALOAM.
-- timeAftRecord: The txt file recording the time stamps pf output poses.
+- **odomAftRecord**: The txt file recording the output poses of ALOAM.
+- **timeAftRecord**: The txt file recording the time stamps pf output poses.
 
 #### Collecting Point Clouds attached to robot B
 Point Clouds attached to robot B should be segmented by RangeNet++ firstly. However, here we only provide the geometry cues and intensity cues for recognition. Thus, for the sake of convenience, we collect the laser points within the preset region of interest. In the ROI, there are no laser points except those attached to robot B. We provide the node [collect_only_vfh_node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotA/src/calVFH/src) for collecting the points and records the time stamps at the same time.
 
 ## Data Preprocessing
 ### Spherical Projection
-Spherical projection is implemented based on the collected point clouds attached to robot B. The node [sphericalnode] is utilized to generate depth maps, intensity maps, and normal maps. These multiple maps are saved as txt.
+Spherical projection is implemented based on the collected point clouds attached to robot B. The node [spherical_projection_node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotA/src/sphereProjection/src) is utilized to generate depth maps, intensity maps, and normal maps. These multiple maps are saved as txt.
 ### [txt to npy]
 ### [Interpolation]
 ### Structure
