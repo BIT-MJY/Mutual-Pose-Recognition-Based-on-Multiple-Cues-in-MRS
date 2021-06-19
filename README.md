@@ -43,11 +43,26 @@ Params in [capturepose.cpp](https://github.com/BIT-MJY/Mutual-Pose-Recognition-B
 - **timeAftRecord**: The txt file recording the time stamps pf output poses.
 
 #### Collecting Point Clouds attached to robot B
-Point Clouds attached to robot B should be segmented by RangeNet++ firstly. However, here we only provide the geometry cues and intensity cues for recognition. Thus, for the sake of convenience, we collect the laser points within the preset region of interest. In the ROI, there are no laser points except those attached to robot B. We provide the node [collect_only_vfh_node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotA/src/calVFH/src) for collecting the points and records the time stamps at the same time.
+Point Clouds attached to robot B should be segmented by RangeNet++ firstly. However, here we only provide the geometry cues and intensity cues for recognition. Thus, for the sake of convenience, we collect the laser points within the preset region of interest. In the ROI, there are no laser points except those attached to robot B. We provide the node [collect_only_vfh_node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotA/src/calVFH/src) for collecting the points and records the time stamps at the same time. Run as
+```
+roslaunch cal_vfh collect_80.launch
+```
+Params in [collect_80.launch](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/data_collection_robotA/src/calVFH/launch/collect_80.launch):
+- **capture_x/y_min/max**: ROI for robot B. In fact, the task to segment the region of the robot teammate is completed by RangeNet++. Here we only provide the primary version, so please ensure that the preset ROI only contains the robot B. The point clouds within this region are collected and saved to **path_pt_for_save**.
+- **path_pt_for_save**: The path for saving raw point clouds.
+- **path_time_for_save**: The path for saving the time stamps of each collected point clouds.
+
 
 ## Data Preprocessing
 ### Spherical Projection
-Spherical projection is implemented based on the collected point clouds attached to robot B. The node [spherical_projection_node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotA/src/sphereProjection/src) is utilized to generate depth maps, intensity maps, and normal maps. These multiple maps are saved as txt.
+Spherical projection is implemented based on the collected point clouds attached to robot B. The node [spherical_projection_node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotA/src/sphereProjection/src) is utilized to generate depth maps, intensity maps, and normal maps. These multiple maps are saved as txt. Please run as 
+```
+roslaunch sphere_projection sphere.launch
+```
+Params in [sphere.launch](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/data_collection_robotA/src/sphereProjection/launch/sphere.launch):
+- **path_pt**: The fold saving raw lidar data .pcd from "Collecting Point Clouds attached to robot B"/**path_pt_for_save**.
+
+
 ### [txt to npy]
 ### [Interpolation]
 ### Structure
