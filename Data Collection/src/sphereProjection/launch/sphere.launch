@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    
+    <arg name="path_pt_source" default="/media/mjy/Samsung_T5/linux/ICUS2021/data0601/vfh/" />
+    <arg name="vertex_root" default="/media/mjy/Samsung_T5/linux/ICUS2021/vertex/" />
+    <arg name="image_height" default="80" />
+    <arg name="image_width" default="2000" />
+
+    <node pkg="sphere_projection" type="sphere" name="sphere_proj" output="screen">
+	<param name="path_pt" value="$(arg path_pt_source)"/>
+	<param name="vertex_img_root" value="$(arg vertex_root)"/>
+	<param name="img_height" value="$(arg image_height)"/>
+	<param name="img_width" value="$(arg image_width)"/>
+    </node>
+
+
+</launch>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    
+    <param name="scan_line" type="int" value="80" />
+
+    <arg name="capture_x_min" default="-3" />
+    <arg name="capture_x_max" default="3" />
+    <arg name="capture_y_min" default="-0.5" />
+    <arg name="capture_y_max" default="4" />
+    <arg name="capture_z_min" default="-0.6" />
+    <arg name="capture_z_max" default="0.2" />
+    <arg name="threshold" default="4" />
+
+    <arg name="path_pt_for_save" default="/media/mjy/Samsung_T5/linux/ICUS2021/data/vfh/" />
+    <arg name="path_vfh_for_save" default="/media/mjy/Samsung_T5/linux/ICUS2021/data/vfh_txt/VFH.txt" />
+    <arg name="path_time_for_save" default="/media/mjy/Samsung_T5/linux/ICUS2021/data/vfh_txt/time.txt" />
+
+    <node pkg="cal_vfh" type="collect_only_vfh" name="collect_data" output="screen">
+        <remap from="/lidar_cloud_origin" to="/lidar_cloud_origin" />
+
+  	<param name="vehicle_range_x_min" value="$(arg capture_x_min)"/>
+  	<param name="vehicle_range_x_max" value="$(arg capture_x_max)"/>
+  	<param name="vehicle_range_y_min" value="$(arg capture_y_min)"/>
+  	<param name="vehicle_range_y_max" value="$(arg capture_y_max)"/>
+  	<param name="vehicle_range_z_min" value="$(arg capture_z_min)"/>
+  	<param name="d_th" value="$(arg threshold)"/>
+
+        <param name="vehicle_range_z_max" value="$(arg capture_z_max)"/>
+
+  	<param name="path_pt" value="$(arg path_pt_for_save)"/>
+  	<param name="path_vfh" value="$(arg path_vfh_for_save)"/>
+  	<param name="path_time" value="$(arg path_time_for_save)"/>
+
+    </node>
+
+    <arg name="rviz" default="true" />
+    <group if="$(arg rviz)">
+        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find cal_vfh)/rviz_cfg/visualize.rviz" />
+    </group>
+
+</launch>
