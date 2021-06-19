@@ -19,6 +19,8 @@ To train a CNN to regress out 6-DOF mutual poses, mapping from **point clouds at
 * Two robots with lidar.
 * Robot Operating System.
 * Tensorflow 2.
+<img src="https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/img/robots.jpg" width="180" height="105">
+
 ### Deployment
 Suppose you have two robots A and B with similar shapes. Then you collect laser points attached to robot B using the lidar of robot A. At the same time, poses of robot B should be recorded. Thus there are several pivotal problems:
 #### Time Synchronization
