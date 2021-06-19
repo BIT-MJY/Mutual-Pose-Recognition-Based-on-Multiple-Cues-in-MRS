@@ -9,7 +9,7 @@ Here is the method to utilize the multiple cues including depth maps, normal map
 * [Data Preprocessing](#data-preprocessing)
 * [CNN Training and Testing](#training-and-testing)
 
-We only provide offline operation for mutual pose recognition. 
+We only provide offline operation guidance for mutual pose recognition. 
 
 ## Related Work
 * Spherical Projection is implemented along the lines of [OverlapNet](https://github.com/BIT-MJY/OverlapNet_for_TF2).
