@@ -17,7 +17,7 @@ We only provide offline operation for mutual pose recognition.
 * Recorded poses is from [ALOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM).
 
 ## Data Collection
-To train a CNN to regress out 6-DOF mutual poses, mapping from **point clouds attached to the robot teammate** to **mutual poses** should be collected. 
+To train a CNN to regress out 6-DOF mutual poses, mappings from **point clouds attached to the robot teammate** to **mutual poses** should be collected. 
 ### Hardware and Software Preparation
 * Two robots with lidar.
 * Robot Operating System.
