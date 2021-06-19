@@ -43,10 +43,6 @@ catkin_package(
 )
 
 
-add_executable(collect src/collect.cpp)
-target_link_libraries(collect ${catkin_LIBRARIES} ${PCL_LIBRARIES})
-add_executable(collect_real src/collect_real.cpp)
-target_link_libraries(collect_real ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 add_executable(collect_only_vfh src/collect_only_vfh.cpp)
 target_link_libraries(collect_only_vfh ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
