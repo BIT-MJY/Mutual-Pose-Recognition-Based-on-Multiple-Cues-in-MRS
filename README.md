@@ -7,7 +7,7 @@ Here is the method to utilize the multiple cues including depth maps, normal map
 
 * [Data Collection](#data-collection)
 * [Data Preprocessing](#data-preprocessing)
-* Training and Testing(#training-and-testing)
+* [CNN Training and Testing](#training-and-testing)
 
 We only provide offline operation for mutual pose recognition. 
 
