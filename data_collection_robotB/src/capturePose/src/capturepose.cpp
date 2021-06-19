@@ -51,13 +51,12 @@ std::size_t line_num = 0;
 std::vector<float> gtTimeVect;
 std::vector<Eigen::Matrix<double, 3, 4>> gtPoseVec;
 nav_msgs::Path laserAfterMappedPath;
-std::ofstream odomAftRecord("/home/mjy/dev/aloam/pose/truePose.txt");
-std::ofstream timeAftRecord("/home/mjy/dev/aloam/pose/timePose.txt");
-
 #include<mutex>
-
-
 int count_save=0;
+
+std::ofstream odomAftRecord("./pose/truePose.txt");
+std::ofstream timeAftRecord("./pose/timePose.txt");
+
 
 void laserOdometryHandler(const nav_msgs::Odometry::ConstPtr &laserOdometry)
 {
@@ -95,7 +94,7 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "capturepose");
 	ros::NodeHandle nh;
 
-	ros::Subscriber subLaserOdometry = nh.subscribe<nav_msgs::Odometry>("/robot2/aft_mapped_to_init", 100, laserOdometryHandler);
+	ros::Subscriber subLaserOdometry = nh.subscribe<nav_msgs::Odometry>("/aft_mapped_to_init", 100, laserOdometryHandler);
 
 	ros::spin();
 
