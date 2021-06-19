@@ -34,7 +34,7 @@ The initial mutual pose is utilized to calculate the real mutual poses. It can b
 #### Robot B Poses for Mutual Poses
 Here [ALOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM) is used by Robot B and the accurate poses from the topic ```/aft_mapped_to_init``` is recorded with [capturepose node]. The results of ALOAM is thought of as ground truth. If you build the surrounding map in advance, scan-to-map can be utilized to collect GT poses. In addition, time stamps are recorded at the same time.
 #### Collecting Point Clouds attached to robot B
-Point Clouds attached to robot B should be segmented by RangeNet++ firstly. However, here we only provide the geometry cues and intensity cues for recognition. Thus, for the sake of convenience, we collect the laser points within the preset region of interest. In the ROI, there are no laser points except those attached to robot B. We provide the node [collect_only_vfh_node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/maina/Data Collection/src/calVFH/src) for collecting the points and records the time stamps at the same time.
+Point Clouds attached to robot B should be segmented by RangeNet++ firstly. However, here we only provide the geometry cues and intensity cues for recognition. Thus, for the sake of convenience, we collect the laser points within the preset region of interest. In the ROI, there are no laser points except those attached to robot B. We provide the node [collect_only_vfh_node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/Data_Collection/src/calVFH/src) for collecting the points and records the time stamps at the same time.
 
 ## Data Preprocessing
 ### Spherical Projection
