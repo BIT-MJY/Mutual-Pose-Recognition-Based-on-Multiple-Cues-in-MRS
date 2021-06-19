@@ -37,7 +37,7 @@ sudo ntpdate 192.168.43.100
 #### Initial Mutual Pose
 The initial mutual pose is utilized to calculate the real mutual poses. It can be realized by multi-lidar extrinsic calibration. We don't provide the source code for calibration, but it is still significant to validate the feasibility of our devised CNN (a gray box) and the following error propagation although "real" mutual poses are not "real".
 #### Robot B Poses for Mutual Poses
-Here [ALOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM) is used by Robot B and the accurate poses from the topic ```/aft_mapped_to_init``` is recorded with [capturepose node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotB/src/capturePose/src). The results of ALOAM is thought of as ground truth. If you build the surrounding map in advance, scan-to-map can be utilized to collect GT poses. In addition, time stamps are recorded at the same time.  
+Here [ALOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM) is used by the robot B and the accurate poses from the topic ```/aft_mapped_to_init``` is recorded with [capturepose node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotB/src/capturePose/src). The results of ALOAM is thought of as ground truth. If you build the surrounding map in advance, scan-to-map can be utilized to collect GT poses. In addition, time stamps are recorded at the same time.  
 
 Run ALOAM firstly for Robot B. Then, launch the [capturepose node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotB/src/capturePose/src) by
 ```
