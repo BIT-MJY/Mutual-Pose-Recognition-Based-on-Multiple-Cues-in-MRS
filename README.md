@@ -38,7 +38,7 @@ Run ALOAM firstly for Robot B. Then, launch the [capturepose node](https://githu
 ```
 rosrun capturePose capturepose 
 ```
-Params in capturepose.cpp:
+Params in [capturepose.cpp](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/data_collection_robotB/src/capturePose/src/capturepose.cpp):
 - **odomAftRecord**: The txt file recording the output poses of ALOAM.
 - **timeAftRecord**: The txt file recording the time stamps pf output poses.
 
