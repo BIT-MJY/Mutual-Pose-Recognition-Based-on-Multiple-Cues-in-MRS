@@ -6,8 +6,8 @@ Source Code for ICUS 2021: Mutual Pose Recognition Based on Multiple Cues in Mul
 Here is the method to utilize the multiple cues including depth maps, normal maps, remission maps, and semantic maps to recognize the mutual poses of pair-wise robots. We first collect the corresponding laser points attached to robot teammate, and then project these points to images fed to the devised CNN. The devised CNN outputs 6-DOF mutual poses. At the same time, error propagation is implemented to capture the uncertainty of the estimated mutual poses. Uncertain, i.e., "over confident" mutual poses are filtered out and not utilized by the following tasks, such as local map merging in multi-robot SLAM (MR-SLAM).
 
 * [Data Collection](#data-collection)
-* Data Preprocessing
-* CNN Training & Testing
+* [Data Preprocessing](#data-preprocessing)
+* CNN Training & Testing(#training-&-testing)
 
 We only provide offline operation for mutual pose recognition. 
 
