@@ -14,7 +14,7 @@ We only provide offline operation guidance for mutual pose recognition.
 ## Related Work
 * Spherical Projection is implemented along the lines of [OverlapNet](https://github.com/BIT-MJY/OverlapNet_for_TF2).
 * Error propagation follows [Moment Propagation](https://github.com/kaibrach/Moment-Propagation.git).
-    * 普通文本
+   * Kai Brach, Beate Sick, and Oliver Durr. Single shot MC dropout approximation. arXiv preprint arXiv:2007.03293, 2020.
 * Recorded poses is from [ALOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM).
 
 ## Data Collection
