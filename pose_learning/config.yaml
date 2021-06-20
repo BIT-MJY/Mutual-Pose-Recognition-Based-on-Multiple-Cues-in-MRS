@@ -1,0 +1,71 @@
+global_setting:
+  # image size
+  height: 80
+  width: 2000
+  use_vlp: False
+
+
+
+txt2npy:
+  # all use=false, show=true to show image. You can only show data.
+  use_depth: True
+  use_intensity: True
+  use_normals: True
+  show_data: False
+  show_index: 2500
+  save_image: False
+
+  # root: source folfer (conclude .txt)
+  # dst: destination folder (generate .npy)
+  all_files_depth_root: "raw_txt/depth/"
+  all_files_depth_dst: "data/depth/"
+
+  all_files_intensity_root: "raw_txt/intensity/"
+  all_files_intensity_dst: "data/intensity/"
+
+  all_files_normal0_root: "raw_txt/vertex_img_n0/"
+  all_files_normal1_root: "raw_txt/vertex_img_n1/"
+  all_files_normal2_root: "raw_txt/vertex_img_n2/"
+  all_files_normal_dst: "data/normal/"
+
+
+align_images_poses:
+  poses_data_root: "raw_txt/poses/"
+  raw_data_root: "raw_txt/"
+  alinged_poses_save_dst: "data/poses/"
+
+
+
+train:
+  image_path: "data"   # training data
+  use_depth: True
+  use_intensity: True
+  use_normals: True
+  use_semantic: False
+  weights_filename: "log/weights/pretrained_model.h5"  # if it exists, fine tune   /// use_generator: True
+  weights_filename_cp: "log/cp/pretrained_weights.h5"  # if it exists, fine tune   /// use_generator: False
+  log_path: "log/"
+  val_rate: 0.1
+  no_epochs: 300
+  batch_size: 3   # 16
+  initial_lr: 0.01
+  lr_alpha: 0.99
+  log_path: "log"
+  watch: True 
+  watch_num: 10
+  use_generator: False
+  shuffle_data: False
+  use_refined_loss: True
+  
+
+  test_developed: False   # Please set False when you are training 
+
+infer:
+  start_test_num: 0   # 6500
+  end_test_num: 9  # 7000
+
+infer_ep:
+  batch_size: 1  # 10
+  start_test_num: 0   # 3000
+  end_test_num: 9    # 4000
+  ep_version_old: True
