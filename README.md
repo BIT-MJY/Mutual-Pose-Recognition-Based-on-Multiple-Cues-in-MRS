@@ -165,7 +165,7 @@ To test with error propagation, run
 ```
 Python3 infer_ep.py
 ```
-<img src="https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/img/tx.jpg" width="270" height="200">
+<img src="https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/img/tx.png" width="270" height="200">
 
 
 Developed by Junyi Ma, Jinyi Xu.
