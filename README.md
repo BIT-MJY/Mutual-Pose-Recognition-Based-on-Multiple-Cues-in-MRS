@@ -105,7 +105,7 @@ Python3 align_images_poses.py
 - **alinged_poses_save_dst**: "data/poses/"
 Finally, there is a file called **aligned_poses.npy** saving the aligned poses for vertex images under **alinged_poses_save_dst**.
 
-### Structure
+### Directory Structure of [pose_learning](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/pose_learning)
 ├─pose_learning  
 　├─raw_txt  
 　　　├─depth  
