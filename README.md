@@ -76,15 +76,13 @@ Please put .txt files from **vertex_root** in the [right place](#structure). The
 Python3 txt2npy.py
 ```
 Params for txt2npy.py are set in [config.xml](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/config.yaml).
-- **use_depth**: Whether transforming raw_txt/depth/*.txt to data/depth/*.txt
-- **use_intensity**: True
-- **use_normals**: True
-- **show_data**: False
-- **show_index**: 2500
-- **save_image**: False
+- **use_depth**: Whether to transform raw_txt/depth/*.txt to data/depth/*.txt.
+- **use_intensity**: Whether to transform raw_txt/intensity/*.txt to data/intensity/*.txt.
+- **use_normals**: Whether to transform raw_txt/normal/*.txt to data/normal/*.txt.
+- **show_data**: Whether to show loaded images.
+- **show_index**: The index of the image to be shown if **show_data** is true.
+- **save_image**: Whether to save the shown image.
 
-  # root: source folfer (conclude .txt)
-  # dst: destination folder (generate .npy)
 - **all_files_depth_root**: "raw_txt/depth/"
 - **all_files_depth_dst**: "data/depth/"
 
@@ -95,7 +93,6 @@ Params for txt2npy.py are set in [config.xml](https://github.com/BIT-MJY/Mutual-
 - **all_files_normal1_root**: "raw_txt/vertex_img_n1/"
 - **all_files_normal2_root**: "raw_txt/vertex_img_n2/"
 - **all_files_normal_dst**: "data/normal/"
-
 
 ### [Interpolation](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/align_images_poses.py)
 
