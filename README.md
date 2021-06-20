@@ -71,7 +71,32 @@ Params in [sphere.launch](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Bas
 - **image_width**: The width of the vertex maps.
 
 ### [txt to npy](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/txt2npy.py)
-Please put .txt files in the [right place](#structure).
+Please put .txt files from **vertex_root** in the [right place](#structure). Then run
+```
+Python3 txt2npy.py
+```
+Params for txt2npy.py are set in [config.xml](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/config.yaml).
+- **use_depth**: Whether transforming raw_txt/depth/*.txt to data/depth/*.txt
+- **use_intensity**: True
+- **use_normals**: True
+- **show_data**: False
+- **show_index**: 2500
+- **save_image**: False
+
+  # root: source folfer (conclude .txt)
+  # dst: destination folder (generate .npy)
+- **all_files_depth_root**: "raw_txt/depth/"
+- **all_files_depth_dst**: "data/depth/"
+
+- **all_files_intensity_root**: "raw_txt/intensity/"
+- **all_files_intensity_dst**: "data/intensity/"
+
+- **all_files_normal0_root**: "raw_txt/vertex_img_n0/"
+- **all_files_normal1_root**: "raw_txt/vertex_img_n1/"
+- **all_files_normal2_root**: "raw_txt/vertex_img_n2/"
+- **all_files_normal_dst**: "data/normal/"
+
+
 ### [Interpolation](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/align_images_poses.py)
 
 
