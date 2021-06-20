@@ -106,50 +106,39 @@ Python3 align_images_poses.py
 Finally, there is a file called **aligned_poses.npy** saving the aligned poses for vertex images under **alinged_poses_save_dst**.
 
 ### Structure
-pose_learning
-> raw_txt  
->> depth  
->>> 1.txt  
->>> 2.txt  
->>> ...  
-
->> intensity  
->>> 1.txt  
->>> 2.txt  
->>> ...
-
-
->> vertex_img_n0 
->>> 1.txt  
->>> 2.txt  
->>> ...  
-
-
->> vertex_img_n1 
->>> 1.txt  
->>> 2.txt  
->>> ...  
->> vertex_img_n2  
->>> 1.txt  
->>> 2.txt  
->>> ...   
-
-
->> poses  
->>> timePose.txt  
->>> truePose.txt  
-
-
->> time.txt  
-
-> data  
->> The files in this folder are all generated automatically.  
-
-> log  
->> cp  
->> weights  
-
-> img  
+├─pose_learning
+  ├─raw_txt  
+    ├─depth  
+      ├─1.txt  
+      ├─2.txt  
+      ├─...  
+    ├─depth intensity  
+      ├─1.txt  
+      ├─2.txt  
+      ├─...
+    ├─vertex_img_n0 
+      ├─1.txt  
+      ├─2.txt  
+      ├─...
+    ├─vertex_img_n1 
+      ├─1.txt  
+      ├─2.txt  
+      ├─... 
+    ├─vertex_img_n2  
+      ├─1.txt  
+      ├─2.txt  
+      ├─...
+    ├─poses  
+      ├─timePose.txt  
+      ├─truePose.txt  
+    ├─time.txt  
+  ├─data  
+      The files under this folder are all generated automatically.  
+  ├─log  
+    ├─cp  
+    ├─weights  
+  ├─img  
+  ├─visualization
 
 ## Training and Testing
 To train [the devised CNN](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/net_rs.py), please run
