@@ -14,7 +14,7 @@ We only provide offline operation guidance for mutual pose recognition.
 ## Related Work
 * Spherical Projection is implemented along the lines of [OverlapNet](https://github.com/BIT-MJY/OverlapNet_for_TF2).
 * Error propagation follows [Moment Propagation](https://github.com/kaibrach/Moment-Propagation.git).
-** 111
+  ** 111
 * Recorded poses is from [ALOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM).
 
 ## Data Collection
