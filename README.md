@@ -180,7 +180,7 @@ Please contact 3120200365@bit.edu.cn for images-poses dataset.
 Developed by Junyi Ma, .
 
 ## Acknowledgment
-I would like to thank Kai Brach and Oliver Dürr for the source code about error propagation, and thank Jinyi Xu for helping with the experiments.
+I would like to thank Kai Brach and Oliver Dürr for the source code about error propagation, and thank Jingyi Xu for helping with the experiments.
 
 
 
