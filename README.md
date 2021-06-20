@@ -178,7 +178,7 @@ Python3 infer_ep.py
 Please contact 3120200365@bit.edu.cn for images-poses dataset.
 
 ## Authors
-Developed by Junyi Ma, .
+Developed by Junyi Ma.
 
 ## Acknowledgment
 I would like to thank Kai Brach and Oliver Dürr for the source code about error propagation, and thank Jingyi Xu for helping with the experiments.
