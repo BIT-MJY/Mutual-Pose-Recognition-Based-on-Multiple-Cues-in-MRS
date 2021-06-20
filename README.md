@@ -95,7 +95,13 @@ Params for txt2npy.py are set in [config.xml](https://github.com/BIT-MJY/Mutual-
 - **all_files_normal_dst**: "data/normal/"
 
 ### [Interpolation](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/align_images_poses.py)
-
+To align the time of laser information with the time of gt poses, please run
+```
+Python3 align_images_poses.py
+```
+- **poses_data_root**: "raw_txt/poses/"
+- **raw_data_root**: "raw_txt/"
+- **alinged_poses_save_dst**: "data/poses/"
 
 ### Structure
 Pose_Learning
