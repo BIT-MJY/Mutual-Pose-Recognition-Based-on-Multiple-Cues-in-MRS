@@ -107,7 +107,7 @@ Finally, there is a file called **aligned_poses.npy** saving the aligned poses f
 
 ### Structure
 ├─pose_learning
-　├─raw_txt  
+&#8194├─raw_txt  
     ├─depth  
       ├─1.txt  
       ├─2.txt  
