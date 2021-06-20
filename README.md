@@ -115,19 +115,19 @@ Finally, there is a file called **aligned_poses.npy** saving the aligned poses f
 　　├─depth intensity  
 　　　├─1.txt  
 　　　├─2.txt  
-　　　├─...
-　　├─vertex_img_n0 
+　　　├─...  
+　　├─vertex_img_n0  
 　　　├─1.txt  
 　　　├─2.txt  
-　　　├─...
-　　├─vertex_img_n1 
+　　　├─...  
+　　├─vertex_img_n1  
 　　　├─1.txt  
 　　　├─2.txt  
-　　　├─... 
+　　　├─...  
 　　├─vertex_img_n2  
 　　　├─1.txt  
 　　　├─2.txt  
-　　　├─...
+　　　├─...  
 　　├─poses  
 　　　├─timePose.txt  
 　　　├─truePose.txt  
@@ -138,7 +138,7 @@ Finally, there is a file called **aligned_poses.npy** saving the aligned poses f
 　　├─cp  
 　　├─weights  
 　├─img  
-　├─visualization
+　├─visualization  
 
 ## Training and Testing
 To train [the devised CNN](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/net_rs.py), please run
