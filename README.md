@@ -70,8 +70,11 @@ Params in [sphere.launch](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Bas
 - **image_height**: The height of the vertex maps.
 - **image_width**: The width of the vertex maps.
 
-### [txt to npy]
-### [Interpolation]
+### [txt to npy](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/txt2npy.py)
+Please put .txt files in the right place(#structure).
+### [Interpolation](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/align_images_poses.py)
+
+
 ### Structure
 Pose_Learning
 > raw_txt  
