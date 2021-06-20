@@ -106,8 +106,8 @@ Python3 align_images_poses.py
 Finally, there is a file called **aligned_poses.npy** saving the aligned poses for vertex images under **alinged_poses_save_dst**.
 
 ### Structure
-├─pose_learning  
-    ├─raw_txt  
+├─pose_learning
+　├─raw_txt  
     ├─depth  
       ├─1.txt  
       ├─2.txt  
