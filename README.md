@@ -3,7 +3,7 @@ Source Code for ICUS 2021: Mutual Pose Recognition Based on Multiple Cues in Mul
 <img src="https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/img/system_overview.png" >
 
 ## Overview
-Here is the method to utilize the multiple cues including depth maps, normal maps, remission maps, and semantic maps to recognize the mutual poses of pair-wise robots. We first collect the corresponding laser points attached to robot teammate, and then project these points to images fed to the devised CNN. The devised CNN outputs 6-DOF mutual poses. At the same time, error propagation is implemented to capture the uncertainty of the estimated mutual poses. Uncertain, i.e., "over confident" mutual poses are filtered out and not utilized by the following tasks, such as local map merging in multi-robot SLAM (MR-SLAM).
+Here is the method to utilize the multiple cues, including depth maps, normal maps, remission maps, and semantic maps, to recognize the mutual poses of pair-wise robots. We first collect the corresponding laser points attached to the robot teammate, and then project these points to images fed to the devised CNN. The devised CNN outputs 6-DOF mutual poses. At the same time, error propagation is implemented to capture the uncertainty of the estimated mutual poses. Uncertain, i.e., "overconfident" mutual poses are filtered out and not utilized by the following tasks, such as local map merging in multi-robot SLAM (MR-SLAM).
 
 * [Data Collection](#data-collection)
 * [Data Preprocessing](#data-preprocessing)
@@ -26,19 +26,19 @@ To train a CNN to regress out 6-DOF mutual poses, mappings from **point clouds a
 <img src="https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/img/robots.PNG" width="270" height="200">
 
 ### Deployment
-Suppose you have two robots A and B with similar shapes. Then you collect laser points attached to robot B using the lidar of robot A. At the same time, poses of robot B should be recorded. Thus there are several pivotal problems:
+Suppose we have two robots A and B with similar shapes. Then we collect laser points attached to robot B using the lidar of robot A. At the same time, the poses of robot B should be recorded. Thus there are several pivotal problems:
 #### Time Synchronization
-Two robots are in the same WIFI:
+Two robots are connected to the same WIFI:
 * Robot A: 192.168.43.50
 * Robot B: 192.168.43.100  
-You can use the following command in the terminal (Robot A) to finish time synchronization between the two robots 
+We can use the following command in the terminal (Robot A) to finish time synchronization between the two robots.
 ```
 sudo ntpdate 192.168.43.100
 ```
 #### Initial Mutual Pose
 The initial mutual pose is utilized to calculate the real mutual poses. It can be realized by multi-lidar extrinsic calibration. We don't provide the source code for calibration, but it is still significant to validate the feasibility of our devised CNN (a gray box) and the following error propagation although "real" mutual poses are not "real".
 #### Robot B Poses for Mutual Poses
-Here [ALOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM) is used by the robot B and the accurate poses from the topic ```/aft_mapped_to_init``` is recorded with [capturepose node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotB/src/capturePose/src). The results of ALOAM is thought of as ground truth. It is better If you build the dense surrounding map in advance. In this case, Scan-to-map can be utilized to collect more accurate GT poses. In addition, time stamps are recorded at the same time.  
+Here [ALOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM) is used by robot B and the accurate poses from the topic ```/aft_mapped_to_init``` is recorded with [capturepose node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotB/src/capturePose/src). The results of ALOAM is thought of as ground truth. It is better If we build the dense surrounding map in advance. In this case, Scan-to-map can be utilized to collect more accurate GT poses. In addition, timestamps are recorded at the same time.  
 
 Run ALOAM firstly for Robot B. Then, launch the [capturepose node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotB/src/capturePose/src) by
 ```
@@ -49,19 +49,19 @@ Params in [capturepose.cpp](https://github.com/BIT-MJY/Mutual-Pose-Recognition-B
 - **timeAftRecord**: The txt file recording the time stamps pf output poses.
 
 #### Collecting Point Clouds attached to robot B
-Point Clouds attached to robot B should be segmented by RangeNet++ firstly. However, here we only provide the geometry cues and intensity cues for recognition. Thus, for the sake of convenience, we collect the laser points within the preset region of interest. In the ROI, there are no laser points except those attached to robot B. We provide the node [collect_only_vfh_node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotA/src/calVFH/src) for collecting the points and records the time stamps at the same time. Run as
+Point Clouds attached to robot B should be segmented by RangeNet++ firstly. However, here we only provide the geometry cues and intensity cues for recognition. Thus, we collect the laser points within the preset region of interest for the sake of convenience. In the ROI, there are no laser points except those attached to robot B. We provide the node [collect_only_vfh_node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotA/src/calVFH/src) for collecting the points and records the timestamps at the same time. Run as
 ```
 roslaunch cal_vfh collect_80.launch
 ```
 Params in [collect_80.launch](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/data_collection_robotA/src/calVFH/launch/collect_80.launch):
-- **capture_x/y_min/max**: ROI for robot B. In fact, the task to segment the region of the robot teammate is completed by RangeNet++. Here we only provide the primary version, so please ensure that the preset ROI only contains the robot B. The point clouds within this region are collected and saved to **path_pt_for_save**.
+- **capture_x/y_min/max**: ROI for robot B. In fact, the task to segment the region of the robot teammate is completed by RangeNet++. Here we only provide the preliminary version, so please ensure that the preset ROI only contains the robot B. The point clouds within this region are collected and saved to **path_pt_for_save**.
 - **path_pt_for_save**: The path for saving raw point clouds.
-- **path_time_for_save**: The path for saving the time stamps of each collected point clouds.
+- **path_time_for_save**: The path for saving the timestamps of each collected point clouds.
 
 
 ## Data Preprocessing
 ### Spherical Projection
-Spherical projection is implemented based on the collected point clouds attached to robot B. The node [spherical_projection_node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotA/src/sphereProjection/src) is utilized to generate depth maps, intensity maps, and normal maps. These multiple maps are saved as txt. Please run as 
+Spherical projection is implemented based on the collected point clouds attached to robot B. The node [spherical_projection_node](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/tree/main/data_collection_robotA/src/sphereProjection/src) is utilized to generate depth maps, intensity maps, and normal maps. These multiple maps are saved as .txt. Please run as 
 ```
 roslaunch sphere_projection sphere.launch
 ```
@@ -175,7 +175,7 @@ Python3 infer_ep.py
 </div>
 
 ## Dataset
-Please contact 3120200365@bit.edu.cn for images-poses dataset.
+Please contact 3120200365@bit.edu.cn for the images-poses dataset.
 
 ## Authors
 Developed by Junyi Ma.
