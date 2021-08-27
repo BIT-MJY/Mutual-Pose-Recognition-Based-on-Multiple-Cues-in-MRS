@@ -130,7 +130,7 @@ Finally, there is a file called **aligned_poses.npy** saving the aligned poses f
 　　　├─...  
 　　├─poses  
 　　　├─timePose.txt  
-　　　├─truePose.txt (timestamps of gt pose)  
+　　　├─truePose.txt (timestamps of gt poses)  
 　　├─time.txt (timestamps of images)  
 　├─data  
 　　　The files under this folder are all generated automatically.  
