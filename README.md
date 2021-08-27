@@ -74,7 +74,7 @@ Params in [sphere.launch](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Bas
 ### [txt to npy](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/txt2npy.py)
 Please put .txt files from **vertex_root** in the [right place](#structure). Then run
 ```
-Python3 txt2npy.py
+python3 txt2npy.py
 ```
 Params for txt2npy.py are set in [config.xml](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/config.yaml).
 - **use_depth**: Whether to transform raw_txt/depth/*.txt to data/depth/*.txt.
