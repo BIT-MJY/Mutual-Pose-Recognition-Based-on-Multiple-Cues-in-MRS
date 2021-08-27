@@ -98,7 +98,7 @@ Params for txt2npy.py are set in [config.xml](https://github.com/BIT-MJY/Mutual-
 ### [Interpolation](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/align_images_poses.py)
 To align the time of laser information with the time of gt poses, please run
 ```
-Python3 align_images_poses.py
+python3 align_images_poses.py
 ```
 - **poses_data_root**: "raw_txt/poses/"
 - **raw_data_root**: "raw_txt/"
@@ -143,17 +143,17 @@ Finally, there is a file called **aligned_poses.npy** saving the aligned poses f
 ## Training and Testing
 To train [the devised CNN](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/net_rs.py), please run
 ```
-Python3 train.py
+python3 train.py
 ```
 Params for train.py are set in [config.xml](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/config.yaml). You can choose the combinations of different cues to train the corresponding network.  
 To test without error propagation, run
 ```
-Python3 infer.py
+python3 infer.py
 ```
 You can specify the start index and the end index in [config.xml](https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/pose_learning/config.yaml) for test. 
 To test with error propagation, run
 ```
-Python3 infer_ep.py
+python3 infer_ep.py
 ```
 <div align=center>
 <img src="https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/img/tx.png" width="200">
