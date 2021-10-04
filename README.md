@@ -164,7 +164,7 @@ python3 infer_ep.py
 </div>
 
 ## Dataset
-Please contact 3120200365@bit.edu.cn for the images-poses dataset.
+You can find cues-poses datasets [here](https://github.com/BIT-MJY/Cues_Poses_Datasets).
 
 ## Authors
 Developed by Junyi Ma, Beijing Institute of Technology.
