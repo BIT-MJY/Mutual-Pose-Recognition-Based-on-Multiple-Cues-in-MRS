@@ -1,5 +1,5 @@
 # Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS
-Source code for ICUS 2021 ***best paper*** : Mutual Pose Recognition Based on Multiple Cues in Multi-robot Systems.
+Source code for ICUS 2021 ***best paper*** : Mutual Pose Recognition Based on Multiple Cues in Multi-robot Systems.  
 Developed by [Junyi Ma](https://github.com/BIT-MJY), Beijing Institute of Technology.
 <img src="https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/img/system_overview.png" >
 
