@@ -2,7 +2,7 @@
 Source code for ICUS 2021 ***best paper*** : Mutual Pose Recognition Based on Multiple Cues in Multi-robot Systems.
 <img src="https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/img/system_overview.png" >
 
-Developed by Junyi Ma, Beijing Institute of Technology.
+Developed by [Junyi Ma](https://github.com/BIT-MJY), Beijing Institute of Technology.
 
 
 ## Publication
