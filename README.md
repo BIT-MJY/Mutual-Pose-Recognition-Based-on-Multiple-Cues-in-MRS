@@ -191,7 +191,7 @@ python3 infer_ep.py
 </div>
 
 ## Dataset
-You can find a toyset [here](https://github.com/BIT-MJY/Cues_Poses_Datasets).
+You can find the RS16-based toyset [here](https://github.com/BIT-MJY/Cues_Poses_Datasets).
 
 
 
