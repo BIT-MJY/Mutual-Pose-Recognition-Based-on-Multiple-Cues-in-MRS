@@ -16,6 +16,17 @@ If you use our implementation in your academic work, please cite the correspondi
   doi={10.1109/ICUS52573.2021.9641141}}
 ```
 
+## Table of Contents
+1. Overview
+2. Related Work
+3. Data Collection
+4. Data Preprocessing
+5. Training and Testing
+6. Dataset
+7. Authors
+8. Acknowledgment
+
+
 ## Overview
 Here is the method to utilize the multiple cues, including depth maps, normal maps, remission maps, and semantic maps, to recognize the mutual poses of pair-wise robots. We first collect the corresponding laser points attached to the robot teammate, and then project these points to images fed to the devised CNN. The devised CNN outputs 6-DOF mutual poses. At the same time, error propagation is implemented to capture the uncertainty of the estimated mutual poses. Uncertain, i.e., "overconfident" mutual poses are filtered out and not utilized by the following tasks, such as local map merging in multi-robot SLAM (MR-SLAM).
 
