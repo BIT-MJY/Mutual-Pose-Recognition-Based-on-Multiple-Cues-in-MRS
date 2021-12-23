@@ -2,6 +2,9 @@
 Source code for ICUS 2021 ***best paper*** : Mutual Pose Recognition Based on Multiple Cues in Multi-robot Systems.
 <img src="https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/img/system_overview.png" >
 
+Developed by Junyi Ma, Beijing Institute of Technology.
+
+
 ## Publication
 If you use our implementation in your academic work, please cite the corresponding [paper](https://ieeexplore.ieee.org/document/9641141):
 ```
@@ -23,8 +26,7 @@ If you use our implementation in your academic work, please cite the correspondi
 4. Data Preprocessing
 5. Training and Testing
 6. Dataset
-7. Authors
-8. Acknowledgment
+7. Acknowledgment
 
 
 ## Overview
@@ -191,8 +193,7 @@ python3 infer_ep.py
 ## Dataset
 You can find cues-poses datasets [here](https://github.com/BIT-MJY/Cues_Poses_Datasets).
 
-## Authors
-Developed by Junyi Ma, Beijing Institute of Technology.
+
 
 ## Acknowledgment
 I would like to thank Kai Brach and Oliver Dürr for the source code about error propagation, and thank Jingyi Xu for helping with the experiments.
