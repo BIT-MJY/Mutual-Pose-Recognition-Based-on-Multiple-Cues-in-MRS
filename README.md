@@ -2,6 +2,12 @@
 Source code for ICUS 2021 ***best paper*** : Mutual Pose Recognition Based on Multiple Cues in Multi-robot Systems.
 <img src="https://github.com/BIT-MJY/Mutual-Pose-Recognition-Based-on-Multiple-Cues-in-MRS/blob/main/img/system_overview.png" >
 
+## Publication
+If you use our implementation in your academic work, please cite the corresponding [paper](https://ieeexplore.ieee.org/document/9641141):
+```
+@INPROCEEDINGS{9641141,  author={Ma, Junyi and Xiong, Guangming and Xu, Jingyi and Song, Jiarui and Sun, Dong},  booktitle={2021 IEEE International Conference on Unmanned Systems (ICUS)},   title={Mutual Pose Recognition Based on Multiple Cues and Uncertainty Capture in Multi-robot Systems},   year={2021},  volume={},  number={},  pages={527-534},  doi={10.1109/ICUS52573.2021.9641141}}
+```
+
 ## Overview
 Here is the method to utilize the multiple cues, including depth maps, normal maps, remission maps, and semantic maps, to recognize the mutual poses of pair-wise robots. We first collect the corresponding laser points attached to the robot teammate, and then project these points to images fed to the devised CNN. The devised CNN outputs 6-DOF mutual poses. At the same time, error propagation is implemented to capture the uncertainty of the estimated mutual poses. Uncertain, i.e., "overconfident" mutual poses are filtered out and not utilized by the following tasks, such as local map merging in multi-robot SLAM (MR-SLAM).
 
