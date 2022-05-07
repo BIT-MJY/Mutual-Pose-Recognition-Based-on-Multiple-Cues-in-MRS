@@ -7,9 +7,9 @@ Developed by [Junyi Ma](https://github.com/BIT-MJY), Beijing Institute of Techno
 
 ## News
 
-* [2022-04] The extended journal version of MR-SLAM with our proposed method, MUC-LOAM, is accepted by [Unmanned Systems](https://www.worldscientific.com/worldscinet/us).
-* [2021-10] [Cues_Poses_Dataset](https://github.com/BIT-MJY/Cues_Poses_Datasets) is available!
-* [2021-06] Initial submission.
+* **[2022-04]** The extended journal version of MR-SLAM with our proposed method, MUC-LOAM, is accepted by [Unmanned Systems](https://www.worldscientific.com/worldscinet/us).
+* **[2021-10]** [Cues_Poses_Dataset](https://github.com/BIT-MJY/Cues_Poses_Datasets) is available!
+* **[2021-06]** Initial submission.
 
 
 
