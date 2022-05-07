@@ -21,8 +21,6 @@ If you use our implementation in your academic work, please cite the correspondi
   booktitle={2021 IEEE International Conference on Unmanned Systems (ICUS)}, 
   title={Mutual Pose Recognition Based on Multiple Cues and Uncertainty Capture in Multi-robot Systems}, 
   year={2021},
-  volume={},
-  number={},
   pages={527-534},
   doi={10.1109/ICUS52573.2021.9641141}}
 ```
