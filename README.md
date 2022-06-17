@@ -17,7 +17,7 @@ Developed by [Junyi Ma](https://github.com/BIT-MJY), Beijing Institute of Techno
 ## Publication
 If you use our implementation in your academic work, please cite the corresponding [paper](https://ieeexplore.ieee.org/document/9641141):
 ```
-@INPROCEEDINGS{9641141,
+@INPROCEEDINGS{ma2021icus,
   author={Ma, Junyi and Xiong, Guangming and Xu, Jingyi and Song, Jiarui and Sun, Dong},
   booktitle={2021 IEEE International Conference on Unmanned Systems (ICUS)}, 
   title={Mutual Pose Recognition Based on Multiple Cues and Uncertainty Capture in Multi-robot Systems}, 
