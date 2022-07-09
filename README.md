@@ -25,6 +25,15 @@ If you use our implementation in your academic work, please cite the correspondi
   pages={527-534},
   doi={10.1109/ICUS52573.2021.9641141}}
 ```
+The extended journal version is [here](https://www.worldscientific.com/doi/abs/10.1142/S2301385023410030):
+```
+@article{ma2022us,
+author = {Xiong, Guangming and Ma, Junyi and Yu, Huilong and Xu, Jingyi and Xu, Jiahui},
+title = {Multi-Uncertainty Captured Multi-Robot Lidar Odometry and Mapping Framework for Large-Scale Environments},
+journal = {Unmanned Systems},
+doi = {10.1142/S2301385023410030},
+}
+```
 
 ## Table of Contents
 1. Overview
