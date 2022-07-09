@@ -212,10 +212,17 @@ You can find the RS16-based toyset [here](https://github.com/BIT-MJY/Cues_Poses_
 
 
 ## Acknowledgment
-I would like to thank Kai Brach and Oliver Dürr for the source code about error propagation, and thank Jingyi Xu for helping with the experiments.
+I would like to thank Kai Brach and Oliver Dürr for the source code about error propagation, and thank Jingyi Xu for helping with the experiments.  
 
-
-
-
+Please cite Kai's paper is you use the error propagation mechanism in our code:
+```
+@article{Brach2020SingleSM,
+  title={Single Shot MC Dropout Approximation},
+  author={Kai Brach and B. Sick and Oliver D{\"u}rr},
+  journal={ArXiv},
+  year={2020},
+  volume={abs/2007.03293}
+}
+```
 
 
